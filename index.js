@@ -28,6 +28,7 @@ const chatRoutes = require('./routes/chat');
 
 const port = 8888;
 console.log(`Your port is ${port}`);
+app.use(express.static('public'));
 
 
 io.on('connection', (socket) => {

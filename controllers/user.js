@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const {validationResult} = require('express-validator/check');
 
 module.exports.register = async function (req, res) {
+    console.log(req);
+    console.log(res.body);
     if (!req.body.first_name || !req.body.last_name || !req.body.email || !req.body.password) throw 404;
 
     const errors = validationResult(req);
